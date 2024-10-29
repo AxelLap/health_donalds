@@ -1,11 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import healthdonals from "../../assets/healthdonals.png";
+import healthdonals from "../assets/healthdonals.png";
 import CartButton from "./CartButton";
+
 const Header = () => {
   return (
-    <header className="w-full border-y">
+    <header className="w-full border-y shadow-sm">
       <div className="w-full  flex justify-between items-center p-[10px]">
         <div className="flex items-center">
           <Image
@@ -14,7 +15,7 @@ const Header = () => {
             width={50}
             height={50}
           />
-          <h1 className="p-left-[10]">Health Donald's</h1>
+          <h1 className="p-left-[10] font-bold">Health Donald's</h1>
         </div>
         <CartButton />
       </div>
