@@ -1,9 +1,8 @@
 "use client";
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import { cn } from "@/lib/utils";
 import localFont from "next/font/local";
-import { Toaster } from "sonner";
+import Header from "../src/components/header";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -25,15 +24,15 @@ export default function RootLayout({ children }) {
           geistSans.variable,
           geistMono.variable,
           "antialiased",
-          "h-full bg-white dark:bg-black"
+          "h-full w-full bg-white dark:bg-black flex justify-center"
         )}
       >
-        <div className=" relative m-auto flex max-h-full min-h-full max-w-md flex-col gap-2 border-x">
-          <div className="flex-1 overflow-hidden ">
-            {children}
-            <Toaster />
-            <Header />
-          </div>
+        <div
+          className="relative  flex flex-col gap-2 border-l border-r"
+          style={{ height: "1000px", width: "500px" }}
+        >
+          <Header />
+          <div className="flex-1 overflow-hidden">{children}</div>
           <Footer />
         </div>
       </body>

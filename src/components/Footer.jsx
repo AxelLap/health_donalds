@@ -1,9 +1,9 @@
 import Image from "next/image";
-import healthdonals from "../assets/healthdonals.png";
+import healthdonals from "../../public/healthdonals.png";
 
 const Footer = () => {
   return (
-    <footer className="w-full border-y flex flex-col items-center">
+    <footer className="relative bottom-0 w-full border-y flex flex-col items-center">
       <div className="w-full  flex justify-center items-center p-[10px]">
         <div className="flex items-center">
           <Image

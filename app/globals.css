@@ -52,12 +52,3 @@ body {
     --ring: 126 69% 63%;
   }
 }
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
